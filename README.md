@@ -22,7 +22,6 @@ var hashRouter = require('simple-hash-router');
 
 
 // Then you attach a your favorite listener to the `hashRouter`
-
 hashRouter.register(function (page, params) {
     console.log(page);      // Name of the page
     console.log(params);    // Object with parameters
@@ -33,7 +32,6 @@ hashRouter.register(function (page, params) {
 
 // Then you define your routes. They have to be a list because the order
 // matters. hashRouter will trigger on the first matched route.
-
 hashRouter.addRoutes([
    {'/': 'index-page'},
    {'about': 'about-page'},
@@ -42,6 +40,7 @@ hashRouter.addRoutes([
 
 // Lastly, you start it. When starting it, it will also trigger the approrpate
 // route even though the URL did not change.
+hashRouter.start();
 ```
 
 That's it! Check `/examples` for a working example. :-)
