@@ -3,6 +3,10 @@
     "version": "0.0.1",
     "description": "Simple hash router",
     "main": "hash-router.js",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/casperin/hashRouter.git"
+    },
     "scripts": {
         "start": "watchify src/hashRouter.js -t babelify -s hashRouter -o ./hashRouter.js",
         "test": "jasmine",
