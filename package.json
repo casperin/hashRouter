@@ -1,0 +1,21 @@
+{
+    "name": "hash-router",
+    "version": "0.0.1",
+    "description": "Simple hash router",
+    "main": "hash-router.js",
+    "scripts": {
+        "start": "watchify src/hashRouter.js -t babelify -s hashRouter -o ./hashRouter.js",
+        "test": "jasmine",
+        "watch-test": "watch \"jasmine\" ."
+    },
+    "keywords": [
+        "routing",
+        "hash"
+    ],
+    "author": "Gorm Casper",
+    "license": "MIT",
+    "devDependencies": {
+        "babelify": "^6.0.1",
+        "watchify": "^3.1.0"
+    }
+}

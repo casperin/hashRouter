@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Basic example</title>
+
+        <!-- You can of course also just require it -->
+        <script src='../hashRouter.js'></script>
+
+    </head>
+    <body>
+
+        <!-- Defining some standard links to use -->
+        <a href='#'>Index</a>
+        <a href='#about'>About</a>
+        <a href='#page/1'>Page 1</a>
+        <a href='#page/1/edit'>Edit page 1</a>
+        <a href='#page/2'>Page 2</a>
+        <a href='#page/2/edit'>Edit page 2</a>
+        <a href='#missing/page'>This won't be found</a>
+
+        <script>
+            // hashRouter works by notifying you whenever the url (hash) has
+            // changed. So first we need to register something so we can see it
+            // in action.
+            hashRouter.register(function (keyword, params) {
+                // This is where you do your thing. Start up controllers, and
+                // views and all that stuff you love to do.
+
+                // For now, we'll just log whatever comes out.
+                console.log(keyword, JSON.stringify(params));
+            });
+
+            // And we need to define some routes
+            hashRouter.addRoutes([
+                {'/': 'found index!'},
+                {'about': 'found about page'},
+                {'page/:id': 'some page'},
+                {'page/:id/edit': 'Edit page'}
+            ]);
+
+            // And then we need to start the thing
+            hashRouter.start();
+        </script>
+
+    </body>
+</html>
