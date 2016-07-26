@@ -2,7 +2,7 @@
     "name": "simple-hash-router",
     "version": "0.0.1",
     "description": "Simple hash router",
-    "main": "hash-router.js",
+    "main": "hashRouter.js",
     "repository": {
         "type": "git",
         "url": "https://github.com/casperin/hashRouter.git"
